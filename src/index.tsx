@@ -2,6 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 
+import moment from 'moment'
+import 'moment/locale/zh-cn'
+import 'antd/dist/antd.css'
+import './index.less'
+
+moment.locale('zh-cn')
+
 ReactDOM.render(
     <React.StrictMode>
         <App />
