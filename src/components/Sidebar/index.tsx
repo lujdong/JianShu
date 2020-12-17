@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import AuthorList from '../AuthorList'
+import './styles/index.less'
 
 const Sidebar: FC = () => {
     return (

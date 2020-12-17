@@ -1,16 +1,9 @@
-.flex {
+.flex(@align-item , @justify-content) {
     display: flex;
+    align-items: @align-item;
+    justify-content: @justify-content;
 }
 
-.flex-center {
-    .flex();
 
-    align-items: center;
-    justify-content: center;
-}
-
-.flex-between {
-    .flex-center();
-
-    justify-content: space-between;
-}
+/* variables */
+@content-width: 960px;
