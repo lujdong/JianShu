@@ -1,10 +1,25 @@
-import React from 'react'
-import { Button } from 'antd'
-function App() {
+import React, { FC } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import router from './router'
+const App: FC = () => {
     return (
-        <div className="app">
-            <Button type="primary">按钮</Button>
-        </div>
+        <Router>
+            <Switch>
+                {
+                    router.map(item => {
+                        console.log('item: ', item)
+                        return (
+                            <Route
+                                component={item.component}
+                                key={item.path}
+                                path={item.path}
+                                exact={item.exact}
+                            />
+                        )
+                    })
+                }
+            </Switch>
+        </Router >
     )
 }
 
